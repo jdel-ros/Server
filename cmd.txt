@@ -1,0 +1,12 @@
+#docker cmd :
+docker build -t server .
+docker run -itd 80:80 -p 3306:3306 -p 443:443 --name=server server:latest
+docker exec -ti server bash
+
+#docker rm :
+docker image rm -f
+docker stop 
+docker rm -f
+
+#restart nginx : 
+service nginx restart
